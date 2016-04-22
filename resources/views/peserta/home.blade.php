@@ -43,7 +43,8 @@
             </table>
             <?php
                 if(Auth::user()->IsValidated==1){
-                    echo "<a class='btn btn-default' href=''>Cetak Kartu Peserta</a>";
+                    echo "<a class='btn btn-default' href='/semnas/kartupeserta'>Cetak Kartu Peserta</a>";
+                    echo "<a class='btn btn-default' href='/semnas/editakun'>Edit Akun</a>";
                 } else {
                     echo "<div class='alert alert-danger' role='alert'><strong>Belum Dikonfirmasi!</strong> Silahkan Lakukan Pembayaran.</div>";
                 }

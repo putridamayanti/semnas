@@ -4,8 +4,8 @@
 <div class="container">
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
-            <h1 style="text-align: center">Pendaftaran Peserta</h1>
-            <form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}">
+            <h1 style="text-align: center; margin-top: 0px">Pendaftaran Peserta</h1>
+            <form class="form-horizontal" role="form" method="POST" action="{{ url('/semnas/register') }}">
                 {!! csrf_field() !!}
 
                 {{--<div class="form-group{{ $errors->has('username') ? ' has-error' : '' }}">--}}
@@ -23,12 +23,26 @@
                 {{--</div>--}}
 
                 <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                    <label class="col-md-3 control-label">Nama Lengkap</label>
+                    <label class="col-md-3 control-label">Username</label>
 
                     <div class="col-md-9">
                         <input type="text" class="form col-sm-7" name="name" value="{{ old('name') }}">
 
                         @if ($errors->has('name'))
+                            <span class="help-block col-sm-5">
+                                        <strong>field is required</strong>
+                                    </span>
+                        @endif
+                    </div>
+                </div>
+
+                <div class="form-group{{ $errors->has('fullname') ? ' has-error' : '' }}">
+                    <label class="col-md-3 control-label">Nama Lengkap</label>
+
+                    <div class="col-md-9">
+                        <input type="text" class="form col-sm-7" name="fullname" value="{{ old('fullname') }}">
+
+                        @if ($errors->has('fullname'))
                             <span class="help-block col-sm-5">
                                         <strong>field is required</strong>
                                     </span>

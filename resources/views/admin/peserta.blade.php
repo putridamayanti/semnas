@@ -36,8 +36,8 @@
                     <td>{{$peserta->jkelamin}}</td>
                 </tr>
             </table>
-            <a class="btn btn-default" href="/validasi/{{$peserta->id}}">Accept</a>
-            <a class="btn btn-default" href="/decline/{{$peserta->id}}">Decline</a>
+            <a class="btn btn-default" href="/semnas/validasi/{{$peserta->id}}">Accept</a>
+            <a class="btn btn-default" href="/semnas/decline/{{$peserta->id}}">Decline</a>
         </div>
     </div>
 @endsection

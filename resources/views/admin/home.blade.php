@@ -16,7 +16,7 @@
             @foreach($peserta as $peserta)
                 <tr>
                     <td>{{$peserta->id}}</td>
-                    <td><a href="/peserta/{{$peserta->id}}">{{$peserta->name}}</a></td>
+                    <td><a href="/semnas/peserta/{{$peserta->id}}">{{$peserta->name}}</a></td>
                     <td>{{$peserta->alamat}}</td>
                     <td>{{$peserta->telp}}</td>
                     <td>{{$peserta->jurusan}}</td>

@@ -12,8 +12,8 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel='stylesheet' type='text/css'>
 
     <!-- Styles -->
-    <link href="/css/bootstrap.css" rel="stylesheet">
-    <link href="/css/main.css" rel="stylesheet">
+    <link href="/semnas/css/bootstrap.css" rel="stylesheet">
+    <link href="/semnas/css/main.css" rel="stylesheet">
     {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
 
     <style>
@@ -30,7 +30,7 @@
         <div class="wrapper">
             <div class="row">
                 <div class="col-sm-2">
-                    <a href="/"><img src="/images/logo.png"></a>
+                    <a href="/"><img src="/semnas/images/logo.png"></a>
                 </div>
                 <div class="col-sm-10">
                     <div id="user">
@@ -42,10 +42,12 @@
                                 </a>
 
                                 <ul class="dropdown-menu" role="menu">
-                                    <li><a href="/profile"><i class="fa fa-btn fa-user"></i>Profile</a></li>
-                                    <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
+                                    <li><a href="/akun"><i class="fa fa-btn fa-user"></i>Profile</a></li>
+                                    <li><a href="{{ url('/semnas/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
                                 </ul>
                             </li>
+                            @elseif(Auth::guest())
+                                <li><a class="btn btn-default" style="margin-top: 15px" href="{{ url('/semnas/') }}">Home</a></li>
                             @endif
                         </ul>
                     </div>
